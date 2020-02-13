@@ -1,4 +1,4 @@
-# vue-youtube
+# home-wallet
 
 ## Project setup
 ```
@@ -27,3 +27,7 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+Config for this project:
+<!-- Validation package -->
+npm install vuelidate --save
