@@ -28,6 +28,10 @@ npm run lint
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
+Used plagins and package:
+- materialize
+- vuelidate
+- 
 Config for this project:
 <!-- Validation package -->
 npm install vuelidate --save
