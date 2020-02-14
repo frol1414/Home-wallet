@@ -35,3 +35,5 @@ Used plagins and package:
 Config for this project:
 <!-- Validation package -->
 npm install vuelidate --save
+<!-- firebase package -->
+npm i firebase
