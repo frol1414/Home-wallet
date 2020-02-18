@@ -41,3 +41,5 @@ npm i firebase
 npm install vuejs-paginate --save
 <!-- lodash package -->
 npm i lodash
+<!-- carts package -->
+npm install vue-chartjs chart.js --save
