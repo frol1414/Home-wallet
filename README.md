@@ -37,3 +37,7 @@ Config for this project:
 npm install vuelidate --save
 <!-- firebase package -->
 npm i firebase
+<!-- pagination package -->
+npm install vuejs-paginate --save
+<!-- lodash package -->
+npm i lodash
