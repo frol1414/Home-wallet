@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="page-title">
-      <h3>Новая запись</h3>
+      <h3>New Record</h3>
     </div>
 
     <Loader v-if="loading" />
@@ -18,7 +18,7 @@
           :value="c.id"
           >{{ c.title }}</option>
         </select>
-        <label>Выберите категорию</label>
+        <label>Select category</label>
       </div>
 
       <p>
@@ -30,7 +30,7 @@
               value="income"
               v-model="type"
           />
-          <span>Доход</span>
+          <span>Income</span>
         </label>
       </p>
 
@@ -43,7 +43,7 @@
               value="outcome"
               v-model="type"
           />
-          <span>Расход</span>
+          <span>Outcome</span>
         </label>
       </p>
 
@@ -54,7 +54,7 @@
             v-model.number="amount"
             :class="{invalid: $v.amount.$dirty && !$v.amount.minValue}"
         >
-        <label for="amount">Сумма</label>
+        <label for="amount">Sum</label>
         <span
             v-if="$v.amount.$dirty && !$v.amount.minValue"
           class="helper-text invalid">Min value {{ $v.amount.$params.minValue.min }}</span>
@@ -67,14 +67,14 @@
             v-model.number="description"
             :class="{invalid: $v.description.$dirty && !$v.description.required}"
         >
-        <label for="description">Описание</label>
+        <label for="description">Description</label>
         <span
             v-if="$v.description.$dirty && !$v.description.required"
             class="helper-text invalid">Please, enter the description</span>
       </div>
 
       <button class="btn waves-effect waves-light" type="submit">
-        Создать
+        Create
         <i class="material-icons right">send</i>
       </button>
     </form>
@@ -115,7 +115,7 @@ export default {
       M.updateTextFields()
     }, 0)
   },
-  
+
   computed: {
     ...mapGetters(['info']),
     canCreateRecord() {

@@ -1,14 +1,14 @@
 <template>
   <form class="card auth-card" @submit.prevent="submitHandler">
     <div class="card-content">
-      <span class="card-title">Домашняя бухгалтерия</span>
+      <span class="card-title">Home wallet</span>
       <div class="input-field">
         <input
             id="email"
             type="text"
             v-model.trim="email"
             :class="{invalid: ($v.email.$dirty && !$v.email.required) || ($v.email.$dirty && !$v.email.email)}"
-            
+
         >
         <label for="email">Email</label>
         <small class="helper-text invalid"
@@ -40,14 +40,14 @@
             class="btn waves-effect waves-light auth-submit"
             type="submit"
         >
-          Войти
+          Log in
           <i class="material-icons right">send</i>
         </button>
       </div>
 
       <p class="center">
-        Нет аккаунта?
-        <router-link to="/register">Зарегистрироваться</router-link>
+        No account?
+        <router-link to="/register">Sign up</router-link>
       </p>
     </div>
   </form>
@@ -63,7 +63,7 @@ export default {
     email: '',
     password: '',
   }),
-  
+
   validations: {
     email: {email, required},
     password: {required, minLength: minLength(5)},
@@ -73,7 +73,7 @@ export default {
     if(messages[this.$route.query.message]) {
       this.$message(messages[this.$route.query.message])
     }
-    
+
   },
 
   methods: {
@@ -91,7 +91,7 @@ export default {
         // Redirect to main page
         this.$router.push('/');
       } catch (e) {}
-      
+
     },
   },
 };

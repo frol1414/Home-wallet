@@ -2,7 +2,7 @@
   <div class="col s12 m6">
     <div>
       <div class="page-subtitle">
-        <h4>Редактировать</h4>
+        <h4>Edit</h4>
       </div>
 
       <form @submit.prevent="submitHundler">
@@ -11,7 +11,7 @@
             <option v-for="c of categories" :key="c.id" :value="c.id">{{ c.title }}
               </option>
           </select>
-          <label>Выберите категорию</label>
+          <label>Select Category</label>
         </div>
 
         <div class="input-field">
@@ -21,7 +21,7 @@
               v-model="title"
               :class="{invalid: $v.title.$dirty && !$v.title.required}"
           >
-          <label for="name">Название</label>
+          <label for="name">Title</label>
           <span
             v-if="$v.title.$dirty && !$v.title.required"
             class="helper-text invalid">Please, enter category name</span>
@@ -34,14 +34,14 @@
               v-model.number="limit"
               :class="{invalid: $v.limit.$dirty && !$v.limit.minValue}"
           >
-          <label for="limit">Лимит</label>
+          <label for="limit">Limit</label>
           <span
             v-if="$v.limit.$dirty && !$v.limit.minValue"
           class="helper-text invalid">Min value {{ $v.limit.$params.minValue.min }}</span>
         </div>
 
         <button class="btn waves-effect waves-light" type="submit">
-          Обновить
+          Refresh
           <i class="material-icons right">send</i>
         </button>
       </form>
